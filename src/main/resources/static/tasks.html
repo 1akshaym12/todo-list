@@ -1,29 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Task App</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>TODO App</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="main-container">
-    <h2>Create New Task</h2>
-    <form id="task-form">
-        <label for="name">Task Name:</label>
-        <input type="text" id="name" name="title" required>
-
-        <label for="status">Status:</label>
-        <select id="status" name="status">
-            <option value="Pending">Pending</option>
-            <option value="Completed">Completed</option>
-        </select>
-
+<div class="container">
+    <h1>TODO List</h1>
+    <form id="taskForm">
+        <input type="text" id="taskInput" placeholder="Enter a task..." required />
         <button type="submit">Add Task</button>
     </form>
-    <p id="response"></p>
-
-    <h1>Tasks</h1>
-    <ul id="task-list"></ul>
+    <ul id="taskList"></ul>
 </div>
+
 <script src="tasks.js"></script>
 </body>
 </html>
