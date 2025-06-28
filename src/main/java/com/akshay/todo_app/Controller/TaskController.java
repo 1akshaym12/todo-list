@@ -22,9 +22,18 @@ public class TaskController {
     }
 
     @PostMapping
-    public String addTask(@RequestBody String title){
-        taskService.addTask(title);
-        return "Task added";
+    public Task addTask(@RequestBody Task task){
+        return taskService.save(task);
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public void deleteTask(@PathVariable Long id){
+        taskService.deleteTask(id);
+    }
+
+    @GetMapping("/toggle/{id}")
+    public void toggleTask(@PathVariable Long id){
+        taskService.toggleTask(id);
     }
 
 

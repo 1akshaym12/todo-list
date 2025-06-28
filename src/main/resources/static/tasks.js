@@ -1,42 +1,28 @@
-fetch('http://localhost:8080/tasks')  // GET request to fetch all tasks
-  .then(response => response.json())
-  .then(data => {
-    const list = document.getElementById('task-list');
-    list.innerHTML = "";
-    data.forEach(task => {
-      const li = document.createElement('li');
-      li.textContent = `${task.title} - ${task.completed ? 'Completed' : 'Pending'}`;
-      list.appendChild(li);
-    });
+function renderTasks(tasks) {
+  const list = document.getElementById('task-list');
+  list.innerHTML = '';
+
+  tasks.forEach(task => {
+    const li = document.createElement('li');
+    li.className = 'task-item';
+
+    // Container for task text
+    const taskText = document.createElement('span');
+    taskText.textContent = `${task.title} - ${task.completed ? 'Completed' : 'Pending'}`;
+    taskText.style.flex = '1';
+
+    // Toggle button
+    const toggleBtn = document.createElement('button');
+    toggleBtn.textContent = 'Toggle';
+    toggleBtn.className = 'toggle-btn';
+    toggleBtn.onclick = function () {
+      fetch(`http://localhost:8080/tasks/${task.id}/toggle`, {
+        method: 'PATCH'
+      }).then(() => fetchTasks());
+    };
+
+    li.appendChild(taskText);
+    li.appendChild(toggleBtn);
+    list.appendChild(li);
   });
-
-// Handle task form submission
-document.getElementById("task-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const task = {
-    title: document.getElementById("name").value,
-    completed: document.getElementById("status").value === "Completed"
-  };
-
-  fetch('http://localhost:8080/tasks', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(task)
-  })
-    .then(response => response.json())
-    .then(data => {
-      const list = document.getElementById('task-list');
-      const li = document.createElement('li');
-      li.textContent = `${data.title} - ${data.completed ? 'Completed' : 'Pending'}`;
-      list.appendChild(li);
-      document.getElementById("response").textContent = "Task added!";
-    })
-    .catch(error => {
-      document.getElementById("response").textContent = "Error: " + error;
-    });
-
-  document.getElementById("task-form").reset();
-});
+}
