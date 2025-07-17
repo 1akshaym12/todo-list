@@ -27,7 +27,7 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 
 # SETUP INSTRUCTION
 1. Clone the Repository
-       git clone https://github.com/your-username/stacktask-todo-app.git
+       git clone https://github.com/1akshaym12/todo-list
        cd stacktask-todo-app
 2. Configure Database
 
@@ -49,7 +49,9 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 
    http://localhost:8081/tasks.html → Task Manager
 
+## SCREENSHOTS
 
+       
 ## 🧪 API Endpoints
 | Method | Endpoint         | Description                   |
 | ------ | ---------------- | ----------------------------- |
@@ -93,6 +95,6 @@ Akshay M
 
 🎓 AIML Engineering Student
 
-📫 [Connect with me on LinkedIn](www.linkedin.com/in/akshay-m-80641b218)
+📫 [LinkedIn Profile](https://www.linkedin.com/in/akshay-m-80641b218/)
 
 
