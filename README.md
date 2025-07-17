@@ -50,6 +50,9 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
    http://localhost:8081/tasks.html → Task Manager
 
 ## SCREENSHOTS
+<img width="1918" height="722" alt="Screenshot 2025-07-17 213317" src="https://github.com/user-attachments/assets/058b8670-6ad6-4367-9a2c-6e484d185b42" />
+<img width="1895" height="843" alt="Screenshot 2025-07-17 213215" src="https://github.com/user-attachments/assets/60974c44-2709-46fc-b58a-43d31f895596" />
+<img width="1861" height="838" alt="Screenshot 2025-07-17 213201" src="https://github.com/user-attachments/assets/f2793342-eaaf-4d52-9f0d-5a49d57e3ad3" />
 
        
 ## 🧪 API Endpoints
