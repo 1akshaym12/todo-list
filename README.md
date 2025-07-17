@@ -25,6 +25,10 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 
 🖥️ Frontend built using HTML, CSS, JS 
 
+## 📁 Project URL
+
+[GitHub Repository](https://github.com/1akshaym12/todo-list)
+
 # SETUP INSTRUCTION
 1. Clone the Repository
        git clone https://github.com/1akshaym12/todo-list
