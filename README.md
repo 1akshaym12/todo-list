@@ -25,6 +25,74 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 
 🖥️ Frontend built using HTML, CSS, JS 
 
-#SETUP INSTRUCTION
-Clone the Repository
-   
+# SETUP INSTRUCTION
+1. Clone the Repository
+       git clone https://github.com/your-username/stacktask-todo-app.git
+       cd stacktask-todo-app
+2. Configure Database
+
+   Open src/main/resources/application.properties
+   Add your DB credentials:
+
+      spring.datasource.url=jdbc:mysql://localhost:3306/todo_db
+      spring.datasource.username=root
+      spring.datasource.password=yourpassword
+
+3. Run the Application
+
+      ./mvnw spring-boot:run
+4. Open in Browser
+
+   http://localhost:8081/home.html → Homepage
+
+   http://localhost:8081/login.html → Login
+
+   http://localhost:8081/tasks.html → Task Manager
+
+
+## 🧪 API Endpoints
+| Method | Endpoint         | Description                   |
+| ------ | ---------------- | ----------------------------- |
+| POST   | `/auth/register` | Register new user             |
+| POST   | `/login`         | Login user (session/JWT)      |
+| GET    | `/tasks`         | Get all tasks (user-specific) |
+| POST   | `/tasks`         | Create new task               |
+| PUT    | `/tasks/{id}`    | Update task                   |
+| DELETE | `/tasks/{id}`    | Delete task                   |
+
+## Security Notes
+
+   CSRF disabled for REST APIs
+
+   Session-based login (or JWT optional)
+
+   Access to /tasks restricted to logged-in users
+
+   BCrypt encryption used for password storage
+
+## 📁 Project Structure
+
+todo_app/
+├── src/
+│   ├── main/
+│   │   ├── java/com/akshay/todo_app/
+│   │   │   ├── controller/
+│   │   │   ├── model/
+│   │   │   ├── repository/
+│   │   │   ├── service/
+│   │   │   └── config/
+│   └── resources/
+│       ├── static/
+│       │   ├── home.html, login.html, tasks.html
+│       │   └── tasks.js, style.css
+│       └── application.properties
+
+## 🙋‍♂️ Author
+
+Akshay M
+
+🎓 AIML Engineering Student
+
+📫 [Connect with me on LinkedIn](www.linkedin.com/in/akshay-m-80641b218)
+
+
