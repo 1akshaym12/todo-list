@@ -2,6 +2,7 @@ package com.akshay.todo_app.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 @Entity
@@ -12,6 +13,10 @@ public class Task {
     private Long id;
     private String title;
     private boolean completed;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    private User user;
 
     public void setId(Long id) {
         this.id = id;
@@ -36,4 +41,9 @@ public class Task {
     public boolean isCompleted() {
         return completed;
     }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
 }

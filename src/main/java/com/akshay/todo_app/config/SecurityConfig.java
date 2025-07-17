@@ -38,12 +38,16 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         http.csrf(customizer -> customizer.disable())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/login.html", "/register.html").permitAll()
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/home.html", "/login.html", "/registration.html", "/registration", "/auth/register", "/about.html", "/contact.html").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(form->form.loginPage("/login.html")
                         .loginProcessingUrl("/login")
-                        .defaultSuccessUrl("/tasks", true)
+                        .defaultSuccessUrl("/tasks.html", true)
                         .failureUrl("/login.html?error=true"))
+
+                .logout(logout -> logout
+                        .logoutSuccessUrl("/home.html")
+                        .permitAll())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED));
 
 

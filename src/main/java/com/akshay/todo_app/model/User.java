@@ -1,12 +1,9 @@
 package com.akshay.todo_app.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
-
 public class User {
 
     @Id
@@ -15,7 +12,6 @@ public class User {
     private String username;
     private String email;
     private String password;
-
 
 
     public String getUsername() {

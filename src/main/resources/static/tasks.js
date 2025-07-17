@@ -2,7 +2,7 @@ const taskList = document.getElementById('taskList');
 const taskForm = document.getElementById('taskForm');
 const taskInput = document.getElementById('taskInput');
 
-const API_URL = "http://localhost:8080/tasks";
+const API_URL = "http://localhost:8081/tasks";
 
 // Load all tasks from backend
 async function loadTasks() {

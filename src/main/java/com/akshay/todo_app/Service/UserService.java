@@ -17,4 +17,17 @@ public class UserService {
         user.setPassword(encoder.encode(user.getPassword()));
         return repo.save(user);
     }
+
+    public User register(User user){
+        user.setPassword(encoder.encode(user.getPassword()));
+        return repo.save(user);
+    }
+
+    public boolean userExists(String username){
+       return  repo.findByUsername(username)!=null;
+    }
+
+    public boolean emailExists(String email) {
+        return repo.findByEmail(email) != null;
+    }
 }

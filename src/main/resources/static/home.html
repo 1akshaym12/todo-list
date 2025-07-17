@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>StackTask - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-family: 'Inter', sans-serif;
+        }
+
+        body {
+          background-color: #ffffff;
+          color: #333;
+        }
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 24px 60px;
+          border-bottom: 1px solid #eee;
+          background-color: #f8f9fb;
+        }
+
+        .logo {
+          font-size: 24px;
+          font-weight: 700;
+          color: #1e3a8a;
+        }
+
+        nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #444;
+          font-weight: 500;
+        }
+
+        .header-buttons button {
+          margin-left: 12px;
+          padding: 10px 20px;
+          border-radius: 6px;
+          font-weight: 600;
+          cursor: pointer;
+          font-size: 15px;
+          border: none;
+        }
+
+        .primary-btn {
+          background-color: #2563eb;
+          color: white;
+        }
+
+        .secondary-btn {
+          background-color: white;
+          color: #2563eb;
+          border: 2px solid #2563eb;
+        }
+
+        .hero {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: space-between;
+          padding: 80px 60px;
+        }
+
+        .hero-text {
+          max-width: 600px;
+        }
+
+        .hero-text h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+          color: #111827;
+        }
+
+        .hero-text p {
+          font-size: 18px;
+          color: #6b7280;
+          margin-bottom: 30px;
+        }
+
+        .hero-image img {
+          width: 100%;
+          max-width: 500px;
+          border-radius: 10px;
+        }
+
+        .cta-buttons button {
+          margin-right: 16px;
+          padding: 12px 24px;
+          font-size: 16px;
+        }
+
+        .features {
+          text-align: center;
+          padding: 60px 20px;
+        }
+
+        .features h2 {
+          font-size: 32px;
+          margin-bottom: 20px;
+          color: #1f2937;
+        }
+
+        .features p {
+          font-size: 18px;
+          color: #6b7280;
+          margin-bottom: 40px;
+        }
+
+        .features-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 30px;
+          max-width: 1000px;
+          margin: auto;
+        }
+
+        .feature-item {
+          background-color: #f9fafb;
+          padding: 30px;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .feature-item h3 {
+          font-size: 20px;
+          margin-bottom: 10px;
+          color: #111827;
+        }
+
+        .feature-item p {
+          color: #6b7280;
+        }
+
+        footer {
+          text-align: center;
+          padding: 30px;
+          color: #aaa;
+          font-size: 14px;
+          border-top: 1px solid #eee;
+          margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">StackTask</div>
+    <nav>
+        <a href="/home.html">Home</a>
+        <a href="/about.html">About</a>
+        <a href="#">Pricing</a>
+        <a href="/contact.html">Contact</a>
+    </nav>
+    <div class="header-buttons">
+        <button class="secondary-btn" onclick="location.href='registration.html'">Register</button>
+        <button class="primary-btn" onclick="location.href='login.html'">Login</button>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Your Smart Todo Companion</h1>
+        <p>Organize your day, track your tasks, and be productive with StackTask – a modern, efficient task manager made for you.</p>
+        <div class="cta-buttons">
+            <button class="primary-btn" onclick="location.href='login.html'">Get Started</button>
+            <button class="secondary-btn">Learn More</button>
+        </div>
+    </div>
+    <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="App Preview" style="margin-top: 40px; border-radius: 12px; width: 100%; max-width: 500px;"/>
+    </div>
+</section>
+
+<section class="features">
+    <h2>Why Choose StackTask?</h2>
+    <p>Everything you need to stay productive and organized.</p>
+    <div class="features-grid">
+        <div class="feature-item">
+            <h3>Simple & Fast</h3>
+            <p>Minimal and intuitive design to help you manage tasks without any clutter.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Secure Authentication</h3>
+            <p>Your data is encrypted and protected with Spring Security.</p>
+        </div>
+        <div class="feature-item">
+            <h3>Custom Task Dashboard</h3>
+            <p>See your tasks, mark complete, and toggle instantly from your dashboard.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2025 StackTask. All rights reserved.
+</footer>
+</body>
+</html>

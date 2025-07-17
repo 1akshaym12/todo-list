@@ -21,6 +21,11 @@ public class TaskController {
       return taskService.getAllTasks();
     }
 
+    @GetMapping("/")
+    public String home(){
+       return "redirect:/home.html";
+    }
+
     @PostMapping
     public Task addTask(@RequestBody Task task){
         return taskService.save(task);
