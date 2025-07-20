@@ -23,8 +23,7 @@ public class TaskController {
 
     @GetMapping("/")
     public String home(){
-       return "redirect:/home.html";
-    }
+       return "redirect:/home.html";    }
 
     @PostMapping
     public Task addTask(@RequestBody Task task){
