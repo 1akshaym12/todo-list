@@ -28,7 +28,7 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 ## 📁 Project URL
 
 [GitHub Repository](https://github.com/1akshaym12/todo-list)
-
+[Vercel Deployed link](todo-list-theta-jade.vercel.app)
 # SETUP INSTRUCTION
 1. Clone the Repository
        git clone https://github.com/1akshaym12/todo-list
