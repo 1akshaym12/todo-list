@@ -1,0 +1,13 @@
+com\akshay\todo_app\model\UserPrincipal.class
+com\akshay\todo_app\repo\UserRepo.class
+com\akshay\todo_app\Service\TaskService.class
+com\akshay\todo_app\model\User.class
+com\akshay\todo_app\Service\UserService.class
+com\akshay\todo_app\package-info.class
+com\akshay\todo_app\repo\TaskRepository.class
+com\akshay\todo_app\Controller\TaskController.class
+com\akshay\todo_app\model\Task.class
+com\akshay\todo_app\TodoAppApplication.class
+com\akshay\todo_app\Controller\UserController.class
+com\akshay\todo_app\config\SecurityConfig.class
+com\akshay\todo_app\Service\MyUserDetailService.class
