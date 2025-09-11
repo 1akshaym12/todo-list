@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact - StackTask</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-family: 'Inter', sans-serif;
+        }
+
+        body {
+          background-color: #fff;
+          color: #333;
+        }
+
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 24px 60px;
+          border-bottom: 1px solid #eee;
+          background-color: #f8f9fb;
+        }
+
+        .logo {
+          font-size: 24px;
+          font-weight: 700;
+          color: #1e3a8a;
+        }
+
+        nav a {
+          margin: 0 15px;
+          text-decoration: none;
+          color: #444;
+          font-weight: 500;
+        }
+
+        .header-buttons button {
+          margin-left: 12px;
+          padding: 10px 20px;
+          border-radius: 6px;
+          font-weight: 600;
+          cursor: pointer;
+          font-size: 15px;
+          border: none;
+        }
+
+        .primary-btn {
+          background-color: #2563eb;
+          color: white;
+        }
+
+        .secondary-btn {
+          background-color: white;
+          color: #2563eb;
+          border: 2px solid #2563eb;
+        }
+
+        .contact-section {
+          max-width: 1000px;
+          margin: auto;
+          padding: 60px 20px;
+        }
+
+        .contact-section h1 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+
+        .contact-details {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 40px;
+          flex-wrap: wrap;
+        }
+
+        .contact-box {
+          flex: 1 1 300px;
+          margin: 20px;
+        }
+
+        .contact-box h3 {
+          color: #1e40af;
+          margin-bottom: 10px;
+        }
+
+        .contact-box p {
+          color: #555;
+        }
+
+        form {
+          background-color: #f9fafb;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        input, textarea {
+          width: 100%;
+          padding: 12px;
+          margin-bottom: 20px;
+          border: 1px solid #ddd;
+          border-radius: 6px;
+          font-size: 16px;
+        }
+
+        button[type="submit"] {
+          background-color: #2563eb;
+          color: white;
+          padding: 12px 24px;
+          border: none;
+          border-radius: 6px;
+          font-size: 16px;
+          cursor: pointer;
+        }
+
+        footer {
+          text-align: center;
+          padding: 30px;
+          color: #aaa;
+          font-size: 14px;
+          border-top: 1px solid #eee;
+          margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">StackTask</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="#">Pricing</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-buttons">
+        <button class="secondary-btn" onclick="location.href='registration.html'">Register</button>
+        <button class="primary-btn" onclick="location.href='login.html'">Login</button>
+    </div>
+</header>
+
+<section class="contact-section">
+    <h1>Contact Us</h1>
+
+    <div class="contact-details">
+        <div class="contact-box">
+            <h3>Email</h3>
+            <p>support@stacktask.com</p>
+        </div>
+        <div class="contact-box">
+            <h3>Phone</h3>
+            <p>+91 98765 43210</p>
+        </div>
+        <div class="contact-box">
+            <h3>Address</h3>
+            <p>SLIET, Punjab, India - 148106</p>
+        </div>
+    </div>
+
+    <form>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 StackTask. All rights reserved.
+</footer>
+</body>
+</html>
