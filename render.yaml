@@ -1,0 +1,29 @@
+services:
+  - type: web
+    name: todo-app
+    env: docker
+    dockerfilePath: ./Dockerfile
+    buildCommand: mvn clean package -DskipTests
+    startCommand: java -jar app.jar
+    plan: free
+    envVars:
+      - key: JDBC_DATABASE_URL
+        fromDatabase:
+          name: todo-app-db
+          property: connectionString
+      - key: JDBC_DATABASE_USERNAME
+        fromDatabase:
+          name: todo-app-db
+          property: user
+      - key: JDBC_DATABASE_PASSWORD
+        fromDatabase:
+          name: todo-app-db
+          property: password
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+
+databases:
+  - name: todo-app-db
+    databaseName: todoapp
+    user: todoapp_user
+    plan: free
