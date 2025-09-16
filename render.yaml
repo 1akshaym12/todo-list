@@ -3,8 +3,6 @@ services:
     name: todo-app
     env: docker
     dockerfilePath: ./Dockerfile
-    buildCommand: mvn clean package -DskipTests
-    startCommand: java -jar app.jar
     plan: free
     envVars:
       - key: JDBC_DATABASE_URL
