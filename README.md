@@ -27,8 +27,8 @@ Your Smart Todo Companion – Organize your day, track tasks, and boost producti
 
 ## 📁 Project URL
 
-[GitHub Repository](https://github.com/1akshaym12/todo-list)
-[Render Deployed link](https://todo-list-15.onrender.com/home.html)
+
+[Project URL](https://todo-list-15.onrender.com/home.html)
 # SETUP INSTRUCTION
 1. Clone the Repository
        git clone https://github.com/1akshaym12/todo-list
